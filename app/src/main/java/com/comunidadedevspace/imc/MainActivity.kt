@@ -12,43 +12,39 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val  edtPeso = findViewById<TextInputEditText>(R.id.edt_peso)
-        val edtAltura = findViewById<TextInputEditText>(R.id.edt_altura)
+        val edtweight = findViewById<TextInputEditText>(R.id.edt_weight)
+        val edtheight = findViewById<TextInputEditText>(R.id.edt_height)
 
-        val btnCalcular = findViewById<Button>(R.id.btn_calcular)
+        val btnCalculate = findViewById<Button>(R.id.btn_calculate)
 
-        btnCalcular.setOnClickListener{
+        btnCalculate.setOnClickListener {
 
 
-            val pesoStr: String= edtPeso.text.toString()
-            val alturaStr: String = edtAltura.text.toString()
+            val weightStr: String = edtweight.text.toString()
+            val heightStr: String = edtheight.text.toString()
 
-            if(pesoStr == "" || alturaStr == ""){
+            if (weightStr == "" || heightStr == "") {
                 Snackbar
                     .make(
-                    edtPeso,
-                   "Preencha os campos vazios",
-                    Snackbar.LENGTH_LONG
-                )
+                        edtweight,
+                        "Fill in the empty fields",
+                        Snackbar.LENGTH_LONG
+                    )
                     .show()
-            }
+            } else {
 
-                val peso = pesoStr.toFloat()
-                val altura = alturaStr.toFloat()
+                val weight = weightStr.toFloat()
+                val height = heightStr.toFloat()
 
-                val alturaQ2 = altura * altura
-                val resultado = peso /alturaQ2
+                val heightQ2 = height * height
+                val resultado = weight / heightQ2
 
-                // Navegar para a proxima tela
-                // Criar o layout da proxima tela
-                // Passar dados(resultado) para a proxima tela
 
-                // Intent - Classe do android
                 val intent = Intent(this, ResultActivity::class.java)
                 intent.putExtra(KEY_RESULT_IMC, resultado)
                 startActivity(intent)
 
-                println("p" + resultado)
-             }
+            }
         }
     }
+}
