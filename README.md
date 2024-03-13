@@ -1,4 +1,4 @@
-# IBM Calculator
+# BMI Calculator
 This project is a native Android application developed with the Kotlin programming language. Its main functionality is to calculate the BMI (Body Mass Index) and display the result on the next screen.
 
 ## :camera_flash: Screenshots
