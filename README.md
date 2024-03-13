@@ -1,12 +1,23 @@
-# Calculadora IMC
-Desc
+# IBM Calculator
+This project is a native Android application developed with the Kotlin programming language. Its main functionality is to calculate the BMI (Body Mass Index) and display the result on the next screen.
 
 ## :camera_flash: Screenshots
-<!-- You can add more screenshots here if you like -->
-Screenshots
+<img src ="https://github.com/Grsis/IBMcalculator/assets/73494592/121c880b-daf0-4d90-9ba8-466255564548" width=260 /><img src ="https://github.com/Grsis/IBMcalculator/assets/73494592/f500cd43-e166-44d8-b562-7435c4d0cc7c" width=260 />
+
 
 ## Tecnologias
-Techs
+- Activity
+- Intent
+- Snackbar
+- ViewGroups
+  - LinearLayout
+  - ConstraintLayout
+- Views
+  - ImageView
+  - TextView
+  - EditText
+  - Button 
+ 
 
 
 ## License
